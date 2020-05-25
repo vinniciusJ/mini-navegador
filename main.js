@@ -1,26 +1,35 @@
-const { app, BrowserWindow } = require('electron')
+const { app, BrowserWindow, globalShortcut} = require('electron')
+const config = require('./config')
+
+let win 
 
 function createWindow () {
   // Create the browser window.
-  const win = new BrowserWindow({
-    width: 800,
-    height: 600,
-    webPreferences: {
-      nodeIntegration: true
-    }
-  })
+    win = new BrowserWindow({
+        width: 800,
+        height: 600,
+        alwaysOnTop: true,
+        webPreferences: {
+        nodeIntegration: true
+        }
+    })
+  win.setMenuBarVisibility(false)
 
   // and load the index.html of the app.
-  win.loadFile('index.html')
+  win.loadURL(config.url)
 
-  // Open the DevTools.
-  win.webContents.openDevTools()
+
 }
-
+function toggleDevTools(){
+    win.webContents.toggleDevTools()
+}
+function createShortcurts(){
+    globalShortcut.register('CmdOrCtrl+J', toggleDevTools)
+}
 // This method will be called when Electron has finished
 // initialization and is ready to create browser windows.
 // Some APIs can only be used after this event occurs.
-app.whenReady().then(createWindow)
+app.whenReady().then(createWindow).then(createShortcurts)
 
 // Quit when all windows are closed.
 app.on('window-all-closed', () => {
