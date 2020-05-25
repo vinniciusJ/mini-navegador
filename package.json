@@ -2,9 +2,9 @@
   "name": "mini-navegador-electron",
   "version": "1.0.0",
   "description": "Uma aplicação que simula o browser em uma mini-versão",
-  "main": "index.js",
+  "main": "main.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "electron ."
   },
   "repository": {
     "type": "git",
@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/vinniciusJ/mini-navegador/issues"
   },
-  "homepage": "https://github.com/vinniciusJ/mini-navegador#readme"
+  "homepage": "https://github.com/vinniciusJ/mini-navegador#readme",
+  "devDependencies": {
+    "electron": "^9.0.0"
+  }
 }
