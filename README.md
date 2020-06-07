@@ -18,9 +18,9 @@ No arquivo `config.js` você pode adicionar qual URL do arquivo que deseja visua
 __Exemplo__:
 
 ```js
-    module.exports = {
-        url: "https://nodejs.org/en/download/"
-    }
+module.exports = {
+    url: "https://nodejs.org/en/download/"
+}
 ```
 
 ### Pré-requisitos
