@@ -16,7 +16,7 @@ function createWindow () {
   win.setMenuBarVisibility(false)
 
   // and load the index.html of the app.
-  win.loadURL(config.url)
+  win.loadURL('https://www.google.com')
 
 
 }
