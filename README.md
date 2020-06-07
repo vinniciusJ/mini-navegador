@@ -6,12 +6,20 @@ Usar a tecnologia ElectronJS para simular um mini navegador para usar no process
 
 ## Tecnologias
 
+As tecnologias usadas foram:
+
 * [NodeJS][node_url]
 * [ElectronJS][electron_url]
 
 ## Como funciona
 
 No arquivo `main.js` você pode selecionar qual URL do arquivo que deseja visualizar.
+
+__Exemplo__:
+
+```js
+    win.loadURL('https://www.google.com')
+```
 
 ### Pré-requisitos
 
@@ -24,8 +32,11 @@ Para executar basta usar o seguinde comando no terminal:
 ```bash
 $ npm start
 ```
+## Imagem
 
+![Mini navegador observando a página do NodeJS][img_url]
 
 
 [node_url]: https://nodejs.org/en/download/ "Instalar NodeJS"
 [electron_url]: https://www.electronjs.org/docs/tutorial/first-app "ElectronJS Docs"
+[img_url]: img.png "NodeJS Download"
