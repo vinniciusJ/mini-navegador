@@ -13,12 +13,14 @@ As tecnologias usadas foram:
 
 ## Como funciona
 
-No arquivo `main.js` você pode selecionar qual URL do arquivo que deseja visualizar.
+No arquivo `config.js` você pode adicionar qual URL do arquivo que deseja visualizar.
 
 __Exemplo__:
 
 ```js
-    win.loadURL('https://www.google.com')
+    module.exports = {
+        url: "https://nodejs.org/en/download/"
+    }
 ```
 
 ### Pré-requisitos
